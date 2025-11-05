@@ -5,6 +5,7 @@
 #ifndef RAYLIB_ECS_TEST_ENTITY_H
 #define RAYLIB_ECS_TEST_ENTITY_H
 #include <cstdint>
+#include <functional>
 
 namespace ECS {
     class Entity {
@@ -24,14 +25,13 @@ namespace ECS {
     private:
         uint32_t id{};
     };
-
-#endif //RAYLIB_ECS_TEST_ENTITY_H
 }
 
-// Hash specialization so `Entity` can be used as a key in `std::unordered_map`
 template<>
 struct std::hash<ECS::Entity> {
     size_t operator()(const ECS::Entity &e) const noexcept {
         return std::hash<uint32_t>()(e.GetId());
     }
 };
+
+#endif //RAYLIB_ECS_TEST_ENTITY_H

@@ -8,6 +8,13 @@
 namespace ECS {
     class TransformComponent {
     public:
+        TransformComponent(float pos_x, float pos_y, float vel_x, float vel_y)
+            : PosX(pos_x),
+              PosY(pos_y),
+              VelX(vel_x),
+              VelY(vel_y) {
+        }
+
         TransformComponent() = default;
 
         float PosX = 0.0f;

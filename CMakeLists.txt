@@ -6,17 +6,17 @@ set(CMAKE_CXX_STANDARD 23)
 find_package(raylib QUIET)
 
 add_executable(raylib_ecs_test src/main.cpp
-        src/Entity.h
-        src/EntityRegistry.cpp
-        src/EntityRegistry.h
-        src/components/SpriteComponent.cpp
-        src/components/SpriteComponent.h
-        src/components/CollisionComponent.cpp
-        src/components/CollisionComponent.h
-        src/components/TransformComponent.cpp
-        src/components/TransformComponent.h
-        src/components/KeyInputComponent.cpp
-        src/components/KeyInputComponent.h
+        src/ecs/entities/Entity.h
+        src/ecs/entities/EntityRegistry.cpp
+        src/ecs/entities/EntityRegistry.h
+        src/ecs/components/SpriteComponent.cpp
+        src/ecs/components/SpriteComponent.h
+        src/ecs/components/CollisionComponent.cpp
+        src/ecs/components/CollisionComponent.h
+        src/ecs/components/TransformComponent.cpp
+        src/ecs/components/TransformComponent.h
+        src/ecs/components/KeyInputComponent.cpp
+        src/ecs/components/KeyInputComponent.h
 )
 
 if(raylib_FOUND)

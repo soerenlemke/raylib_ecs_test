@@ -5,9 +5,10 @@
 #ifndef RAYLIB_ECS_TEST_KEYINPUTCOMPONENT_H
 #define RAYLIB_ECS_TEST_KEYINPUTCOMPONENT_H
 
-
-class KeyInputComponent {
-};
+namespace ECS {
+    class KeyInputComponent {
+    };
+}
 
 
 #endif //RAYLIB_ECS_TEST_KEYINPUTCOMPONENT_H

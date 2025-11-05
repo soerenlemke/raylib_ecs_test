@@ -5,9 +5,10 @@
 #ifndef RAYLIB_ECS_TEST_SPRITECOMPONENT_H
 #define RAYLIB_ECS_TEST_SPRITECOMPONENT_H
 
-
-class SpriteComponent {
-};
+namespace ECS {
+    class SpriteComponent {
+    };
+}
 
 
 #endif //RAYLIB_ECS_TEST_SPRITECOMPONENT_H

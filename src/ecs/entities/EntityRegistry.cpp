@@ -5,17 +5,17 @@
 #include "EntityRegistry.h"
 
 
-EntityRegistry::EntityRegistry(int maxEntities)
+ECS::EntityRegistry::EntityRegistry(int maxEntities)
     : maxEntities(maxEntities) {
 }
 
-Entity EntityRegistry::CreateEntity() {
+ECS::Entity ECS::EntityRegistry::CreateEntity() {
     Entity e(nextId++);
     Entities.emplace_back(e);
     return e;
 }
 
-void EntityRegistry::DestroyEntity(const Entity &entity) {
+void ECS::EntityRegistry::DestroyEntity(const Entity &entity) {
     std::erase(Entities, entity);
     Sprites.erase(entity);
     Transforms.erase(entity);
@@ -23,10 +23,10 @@ void EntityRegistry::DestroyEntity(const Entity &entity) {
     Collisions.erase(entity);
 }
 
-int EntityRegistry::GetEntityCount() const {
+int ECS::EntityRegistry::GetEntityCount() const {
     return static_cast<int>(Entities.size());
 }
 
-int EntityRegistry::GetMaxEntities() const {
+int ECS::EntityRegistry::GetMaxEntities() const {
     return maxEntities;
 }

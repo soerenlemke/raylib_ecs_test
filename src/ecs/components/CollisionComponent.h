@@ -5,9 +5,10 @@
 #ifndef RAYLIB_ECS_TEST_COLLISIONCOMPONENT_H
 #define RAYLIB_ECS_TEST_COLLISIONCOMPONENT_H
 
-
-class CollisionComponent {
-};
+namespace ECS {
+    class CollisionComponent {
+    };
+}
 
 
 #endif //RAYLIB_ECS_TEST_COLLISIONCOMPONENT_H

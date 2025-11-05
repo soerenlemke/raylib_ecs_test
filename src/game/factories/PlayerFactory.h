@@ -12,7 +12,8 @@ namespace ECS {
 
 namespace Game {
     class PlayerFactory {
-        static ECS::Entity CreatePlayer(ECS::EntityRegistry &registry, float x = 0.0f, float y = 0.0f, int spriteId = 0);
+        static ECS::Entity CreatePlayer(ECS::EntityRegistry &registry, float x = 0.0f, float y = 0.0f,
+                                        int spriteId = 0);
     };
 }
 

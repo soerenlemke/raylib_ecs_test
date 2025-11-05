@@ -19,11 +19,25 @@ namespace ECS {
         explicit EntityRegistry(int maxEntities = 1000);
 
         Entity CreateEntity();
-
         void DestroyEntity(const Entity &entity);
 
-        int GetEntityCount() const;
+        void AddSprite(const Entity &e, const SpriteComponent &sc);
+        SpriteComponent* GetSprite(const Entity &e);
+        void RemoveSprite(const Entity &e);
 
+        void AddTransform(const Entity &e, const TransformComponent &tc);
+        TransformComponent* GetTransform(const Entity &e);
+        void RemoveTransform(const Entity &e);
+
+        void AddKeyInput(const Entity &e, const KeyInputComponent &kc);
+        KeyInputComponent* GetKeyInput(const Entity &e);
+        void RemoveKeyInput(const Entity &e);
+
+        void AddCollision(const Entity &e, const CollisionComponent &cc);
+        CollisionComponent* GetCollision(const Entity &e);
+        void RemoveCollision(const Entity &e);
+
+        int GetEntityCount() const;
         int GetMaxEntities() const;
 
     private:

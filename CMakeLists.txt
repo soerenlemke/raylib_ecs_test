@@ -17,6 +17,8 @@ add_executable(raylib_ecs_test src/main.cpp
         src/ecs/components/TransformComponent.h
         src/ecs/components/KeyInputComponent.cpp
         src/ecs/components/KeyInputComponent.h
+        src/game/factories/PlayerFactory.cpp
+        src/game/factories/PlayerFactory.h
 )
 
 if(raylib_FOUND)
